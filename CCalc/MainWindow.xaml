@@ -11,9 +11,6 @@
             <TabItem Header="分子量计算器">
                 <Frame Source="Molecular.xaml" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
             </TabItem>
-            <TabItem Header="TabItem">
-                ?
-            </TabItem>
         </TabControl>
 
     </Grid>
