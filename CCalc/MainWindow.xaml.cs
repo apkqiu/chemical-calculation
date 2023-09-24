@@ -85,8 +85,8 @@ namespace CCalc
 
 			CR.Text = C0.IsChecked == true
 				? C1.SelectedIndex == 0
-					? Math.Round(S, C2.SelectedIndex + 1, MidpointRounding.ToEven).ToString()
-					: Math.Round(S, C2.SelectedIndex + 1, MidpointRounding.AwayFromZero).ToString()
+					? Math.Round(S, C2.SelectedIndex, MidpointRounding.ToEven).ToString()
+					: Math.Round(S, C2.SelectedIndex, MidpointRounding.AwayFromZero).ToString()
 				: S.ToString();
 		}
 
@@ -142,6 +142,11 @@ namespace CCalc
 				}
 			}
 			CF.IsEnabled = C0.IsEnabled = calc.IsEnabled = true;
+			C2.Items.Add(new ComboBoxItem() { Content = "取整" });
+			for (int i = 1; i < 10; i++)
+			{
+				C2.Items.Add(new ComboBoxItem() { Content="修约至小数点后"+i.ToString()+"位", IsSelected=i==4});
+			}
 		}
 
 	}
